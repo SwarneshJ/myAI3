@@ -126,6 +126,8 @@ function ChartTooltipContent({
     nameKey?: string
     labelKey?: string
     payload?: any
+    label?: any
+    labelFormatter?: any
   }) {
   const { config } = useChart()
 
