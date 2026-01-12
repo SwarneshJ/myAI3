@@ -137,10 +137,10 @@ export default function Chat() {
   }
 
   return (
-    <div className="flex h-screen items-center justify-center font-sans dark:bg-black">
-      <main className="w-full dark:bg-black h-screen relative">
-        <div className="fixed top-0 left-0 right-0 z-50 bg-linear-to-b from-background via-background/50 to-transparent dark:bg-black overflow-visible pb-16">
-          <div className="relative overflow-visible">
+    <div className="flex h-screen items-center justify-center font-sans bg-slate-50 dark:bg-slate-950">
+      {/* Added a subtle gradient here */}
+      <main className="w-full bg-gradient-to-b from-blue-50 to-white dark:from-slate-900 dark:to-black h-screen relative">
+          <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-blue-50/90 via-white/50 to-transparent dark:from-slate-900/90 dark:via-black/50 overflow-visible pb-16 backdrop-blur-sm">          <div className="relative overflow-visible">
             <ChatHeader>
               <ChatHeaderBlock />
               <ChatHeaderBlock className="justify-center items-center">
