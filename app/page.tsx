@@ -145,13 +145,17 @@ export default function Chat() {
               <ChatHeaderBlock />
               <ChatHeaderBlock className="justify-center items-center">
                 <Avatar
-                  className="size-8 ring-1 ring-primary"
+                  className="size-10 overflow-hidden" // Increased size, removed ring
                 >
-                  <AvatarImage src="/logo.png" />
+                  {/* Add object-cover to fix the squishing */}
+                  <AvatarImage src="/logo.png" className="object-cover" />
                   <AvatarFallback>
-                    <Image src="/logo.png" alt="Logo" width={36} height={36} />
+                    <Image src="/logo.png" alt="Logo" width={40} height={40} className="object-cover" />
                   </AvatarFallback>
                 </Avatar>
+                <Avatar
+                  className="size-8 ring-1 ring-primary"
+                >
                 <p className="tracking-tight">Chat with {AI_NAME}</p>
               </ChatHeaderBlock>
               <ChatHeaderBlock className="justify-end">
