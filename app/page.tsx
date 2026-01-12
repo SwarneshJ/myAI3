@@ -137,23 +137,26 @@ export default function Chat() {
   }
 
   return (
-    <div className="flex h-screen items-center justify-center font-sans bg-slate-50 dark:bg-slate-950">
-      {/* Added a subtle gradient here */}
-      <main className="w-full bg-gradient-to-b from-blue-50 to-white dark:from-slate-900 dark:to-black h-screen relative">
-          <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-blue-50/90 via-white/50 to-transparent dark:from-slate-900/90 dark:via-black/50 overflow-visible pb-16 backdrop-blur-sm">          <div className="relative overflow-visible">
+    <div className="flex h-screen items-center justify-center font-sans bg-[#f3f4f6]">
+      <main className="w-full bg-[#f3f4f6] h-screen relative">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-[#007c7c] border-b border-[#005f5f] shadow-md pb-4 pt-4">
+          <div className="relative overflow-visible text-white"> 
+            {/* Added 'text-white' so the text contrasts with the dark teal */}            
             <ChatHeader>
               <ChatHeaderBlock />
-              <ChatHeaderBlock className="justify-center items-center">
-                <Avatar
-                  className="size-10 overflow-hidden" // Increased size, removed ring
-                >
-                  {/* Add object-cover to fix the squishing */}
+              <ChatHeaderBlock className="justify-center items-center gap-3">
+                {/* 1. Increased Logo Size from size-9 (36px) to size-14 (56px) */}
+                <Avatar className="size-14 overflow-hidden border border-blue-200 shadow-sm">
                   <AvatarImage src="/logo.png" className="object-cover" />
                   <AvatarFallback>
-                    <Image src="/logo.png" alt="Logo" width={40} height={40} className="object-cover" />
+                    <Image src="/logo.png" alt="Logo" width={56} height={56} className="object-cover" />
                   </AvatarFallback>
                 </Avatar>
-                <p className="tracking-tight">Chat with {AI_NAME}</p>
+                
+                {/* 2. Increased Text Size to 'text-xl' and made it bolder */}
+                <p className="tracking-tight font-bold text-xl text-gray-800 dark:text-gray-100">
+                  Chat with {AI_NAME}
+                </p>
               </ChatHeaderBlock>
               <ChatHeaderBlock className="justify-end">
                 <Button
