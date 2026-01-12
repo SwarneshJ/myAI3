@@ -153,9 +153,6 @@ export default function Chat() {
                     <Image src="/logo.png" alt="Logo" width={40} height={40} className="object-cover" />
                   </AvatarFallback>
                 </Avatar>
-                <Avatar
-                  className="size-8 ring-1 ring-primary"
-                >
                 <p className="tracking-tight">Chat with {AI_NAME}</p>
               </ChatHeaderBlock>
               <ChatHeaderBlock className="justify-end">
