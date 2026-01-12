@@ -30,10 +30,10 @@ function getDateAndTime(): string {
 
 export const DATE_AND_TIME = getDateAndTime();
 
-export const AI_NAME = "MyAI3";
+export const AI_NAME = "NC DMV Co-Pilot";
 export const OWNER_NAME = "Swarnesh";
 
-export const WELCOME_MESSAGE = `Hello! I'm ${AI_NAME}, an AI assistant created by ${OWNER_NAME}.`
+export const WELCOME_MESSAGE = `Welcome to North Carolina! 🚙💨 I'm ${AI_NAME}, your personal study buddy for the DMV Learner's Permit test and created by ${OWNER_NAME}. Moving to a new place is stressful, but getting your license shouldn't be. Ask me anything about road signs, right-of-way rules, or alcohol limits, and I'll help you pass on the first try!.`
 
 export const CLEAR_CHAT_TEXT = "New";
 
