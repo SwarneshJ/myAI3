@@ -157,15 +157,15 @@ export default function Chat() {
               <ChatHeaderBlock />
               <ChatHeaderBlock className="justify-center items-center gap-3">
                 {/* 1. Increased Logo Size from size-9 (36px) to size-14 (56px) */}
-                <Avatar className="size-16 overflow-hidden border border-blue-200 shadow-sm">
+                <Avatar className="size-18 overflow-hidden border border-blue-200 shadow-sm">
                   <AvatarImage src="/logo.png" className="object-cover" />
                   <AvatarFallback>
-                    <Image src="/logo.png" alt="Logo" width={56} height={56} className="object-cover" />
+                    <Image src="/logo.png" alt="Logo" width={72} height={72} className="object-cover" />
                   </AvatarFallback>
                 </Avatar>
                 
                 {/* 2. Increased Text Size to 'text-3xl' and made it bolder */}
-                <p className="tracking-tight font-bold text-xl text-gray-800 dark:text-gray-100">
+                <p className="tracking-tight font-bold text-3xl text-gray-800 dark:text-gray-100">
                   Chat with {AI_NAME}
                 </p>
               </ChatHeaderBlock>
