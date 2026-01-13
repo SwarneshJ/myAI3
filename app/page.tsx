@@ -173,9 +173,12 @@ export default function Chat() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="cursor-pointer"
                   onClick={clearChat}
+                  className="cursor-pointer bg-transparent text-white border-white/50 hover:bg-white hover:text-[#007c7c] transition-all"
                 >
+                  <Plus className="size-4" />
+                  {CLEAR_CHAT_TEXT}
+                </Button>
                   <Plus className="size-4" />
                   {CLEAR_CHAT_TEXT}
                 </Button>
