@@ -137,8 +137,19 @@ export default function Chat() {
   }
 
   return (
-    <div className="flex h-screen items-center justify-center font-sans bg-[#f3f4f6]">
-      <main className="w-full bg-[#f3f4f6] h-screen relative">
+    // REPLACE the outer return div with this:
+    <div className="flex h-screen items-center justify-center font-sans relative overflow-hidden">
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/background.jpg')", // Ensure this file is in /public
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+      </div>
+      <main className="relative z-10 w-full h-screen flex flex-col items-center">
         <div className="fixed top-0 left-0 right-0 z-50 bg-[#007c7c] border-b border-[#005f5f] shadow-md pb-4 pt-4">
           <div className="relative overflow-visible text-white"> 
             {/* Added 'text-white' so the text contrasts with the dark teal */}            
