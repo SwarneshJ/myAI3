@@ -6,7 +6,12 @@ import { ToolCall, ToolResult } from "./tool-call";
 export function AssistantMessage({ message, status, isLastMessage, durations, onDurationChange }: { message: UIMessage; status?: string; isLastMessage?: boolean; durations?: Record<string, number>; onDurationChange?: (key: string, duration: number) => void }) {
     return (
         <div className="w-full">
-            <div className="text-sm flex flex-col gap-4">
+            {/* UPDATED LINE BELOW: 
+               Added bg-black/70, text-white, border, and rounded classes 
+               to create the "Dark Glass" bubble effect.
+            */}
+            <div className="relative max-w-[90%] rounded-2xl rounded-tl-sm bg-black/70 backdrop-blur-sm px-5 py-3 text-white shadow-md border border-white/20 text-sm flex flex-col gap-4">
+                
                 {message.parts.map((part, i) => {
                     const isStreaming = status === "streaming" && isLastMessage && i === message.parts.length - 1;
                     const durationKey = `${message.id}-${i}`;
