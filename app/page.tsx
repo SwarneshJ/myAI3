@@ -174,7 +174,7 @@ export default function Chat() {
                   variant="outline"
                   size="sm"
                   onClick={clearChat}
-                  className="cursor-pointer bg-transparent text-white border-white/50 hover:bg-white hover:text-[#007c7c] transition-all"
+                  className="cursor-pointer bg-transparent text-black border-black/50 hover:bg-white hover:text-[#007c7c] transition-all"
                 >
                   <Plus className="size-4" />
                   {CLEAR_CHAT_TEXT}
