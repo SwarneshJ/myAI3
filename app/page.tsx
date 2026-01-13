@@ -179,9 +179,6 @@ export default function Chat() {
                   <Plus className="size-4" />
                   {CLEAR_CHAT_TEXT}
                 </Button>
-                  <Plus className="size-4" />
-                  {CLEAR_CHAT_TEXT}
-                </Button>
               </ChatHeaderBlock>
             </ChatHeader>
           </div>
